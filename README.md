@@ -152,6 +152,22 @@ I learned that taking a snapshot before doing experiments is useful because it g
 
 I learned how to record the setup process with screenshots and organize the work in a GitHub repository using a README file.
 
+# 🔐 Security & Ethical Use
+
+This lab is created for learning and cybersecurity practice.
+
+All testing will be performed only on systems that I own or have permission to test.
+
+The lab provides a controlled environment where I can safely practice cybersecurity concepts and security-testing techniques.
+
+# 🔗 Tools & Resources
+
+These are the main tools I used for setting up the cybersecurity lab.
+
+- **7-Zip:** https://7-zip.org/download.html
+- **Oracle VirtualBox:** https://virtualbox.org/wiki/Downloads
+- **Kali Linux:** https://kali.org/get-kali
+  
 ```text
 kali-linux-2025.4-vmware-amd64.vmdk
 
