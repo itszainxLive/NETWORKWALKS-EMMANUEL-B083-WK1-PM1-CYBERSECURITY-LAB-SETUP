@@ -89,5 +89,15 @@ The IPv4 configuration was checked to ensure that Kali is connected to the `10.0
 
 ![Kali Network Settings](screenshots/04-kali-network-settings.png)
 
+## Step 5 — Kali Linux Virtual Machine
+
+The Kali Linux virtual machine was successfully added and configured in VirtualBox.
+
+The VM was configured with 2048 MB RAM and connected to the `NatNetwork`.
+
+### Screenshot
+
+![Kali Linux Virtual Machine](screenshots/05-kali-linux.png)
+
 ```text
 kali-linux-2025.4-vmware-amd64.vmdk
