@@ -1,8 +1,6 @@
 # NETWORKWALKS-EMMANUEL-B083-WK1-PM1-CYBERSECURITY-LAB-SETUP
-Cybersecurity Lab Environment Setup using VirtualBox and Kali Linux
-# 🔐 Cybersecurity Lab Environment Setup
 
-**Building a virtual cybersecurity lab using Oracle VirtualBox and Kali Linux**
+**Cybersecurity Lab Environment Setup using VirtualBox and Kali Linux**
 
 ---
 
@@ -10,7 +8,7 @@ Cybersecurity Lab Environment Setup using VirtualBox and Kali Linux
 
 This project focuses on setting up a basic virtual cybersecurity laboratory using **Oracle VirtualBox** and **Kali Linux**.
 
-The lab will provide a controlled environment for learning cybersecurity concepts and performing authorized security-testing activities.
+The lab provides a controlled environment for learning cybersecurity concepts and performing authorized security-testing activities.
 
 ---
 
@@ -22,6 +20,7 @@ The lab will provide a controlled environment for learning cybersecurity concept
 - Configure the lab network as `10.0.0.0/24`.
 - Add Kali Linux to VirtualBox.
 - Configure the Kali virtual machine.
+- Verify network connectivity.
 - Document the setup process with screenshots.
 - Prepare the environment for future cybersecurity exercises.
 
@@ -72,7 +71,7 @@ A dedicated NAT Network named **NatNetwork** was created in VirtualBox.
 | DHCP | Enabled |
 | IPv6 | Disabled |
 
-The NAT Network will allow virtual machines connected to the same network to communicate with each other while providing NAT-based network connectivity.
+The NAT Network allows virtual machines connected to the same network to communicate with each other while providing NAT-based network connectivity.
 
 ### Screenshot
 
@@ -80,11 +79,15 @@ The NAT Network will allow virtual machines connected to the same network to com
 
 ---
 
-## Step 4 — Add Kali Linux to VirtualBox
+## Step 4 — Configure Kali Linux Network Settings
 
-An existing **Kali Linux 2025.4** VMware virtual disk was attached to a new VirtualBox virtual machine.
+The Kali Linux network settings were configured through the network connection settings.
 
-The original virtual disk used for the VM is:
+The IPv4 configuration was checked to ensure that Kali is connected to the `10.0.0.0/24` lab network.
+
+### Screenshot
+
+![Kali Network Settings](screenshots/04-kali-network-settings.png)
 
 ```text
 kali-linux-2025.4-vmware-amd64.vmdk
