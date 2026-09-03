@@ -167,7 +167,25 @@ These are the main tools I used for setting up the cybersecurity lab.
 - **7-Zip:** https://7-zip.org/download.html
 - **Oracle VirtualBox:** https://virtualbox.org/wiki/Downloads
 - **Kali Linux:** https://kali.org/get-kali
-  
+# 👤 Author
+
+**Zain ul Abidin**
+
+**Cyber Security Student B083**
+
+LinkedIn: [https://www.linkedin.com/in/zain-ul-abidin-673944280/](https://www.linkedin.com/in/zain-ul-abidin-673944280/)
+
+---
+
+## 📌 Project Information
+
+**Program Name:** Cybersecurity at Networkwalks  
+**Week:** 01  
+**Project:** Cybersecurity & Pentesting Lab Setup  
+**Author:** Zain ul Abidin  
+**B-Number:** B083  
+**Repository:** GitHub
+
 ```text
 kali-linux-2025.4-vmware-amd64.vmdk
 
