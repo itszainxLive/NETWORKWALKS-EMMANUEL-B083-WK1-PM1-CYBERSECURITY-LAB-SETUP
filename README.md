@@ -99,5 +99,28 @@ The VM was configured with 2048 MB RAM and connected to the `NatNetwork`.
 
 ![Kali Linux Virtual Machine](screenshots/05-kali-linux.png)
 
+# 🔎 Lab Verification
+
+| **✅ Test** | **🧾 Command** | **🎯 Expected Result** |
+|---|---|---|
+| 🌐 Check IP address | `ip a` | Correct Kali IP displayed |
+| 📡 Test gateway | `ping 10.0.0.1` | Successful replies |
+| 🌍 Test Internet connectivity | `ping 8.8.8.8` | Successful replies |
+| 🔎 Test DNS resolution | `nslookup networkwalks.com` | Domain resolves |
+| 🧰 Verify Nmap | `nmap --version` | Nmap version displayed |
+| 🔄 Verify snapshot | Restore snapshot and run `ip a` | Baseline configuration restored |
+
+## 📸 Verification Screenshots
+
+### Verification Screenshot 1
+
+![Lab Verification 1](screenshots/lab-verification-1.png)
+
+### Verification Screenshot 2
+
+![Lab Verification 2](screenshots/lab-verification-2.png)
+
 ```text
 kali-linux-2025.4-vmware-amd64.vmdk
+
+
