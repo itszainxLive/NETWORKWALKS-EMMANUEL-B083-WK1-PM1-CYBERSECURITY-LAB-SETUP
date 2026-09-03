@@ -120,6 +120,38 @@ The VM was configured with 2048 MB RAM and connected to the `NatNetwork`.
 
 ![Lab Verification 2](screenshots/lab-verification-2.png)
 
+# 💡 What I Learned
+
+While doing this lab, I learned how to set up a basic cybersecurity environment using VirtualBox and Kali Linux.
+
+### 1. Setting Up a Virtual Lab
+
+I learned how to use VirtualBox to create and manage virtual machines. I also learned how a virtual lab can be used to practice cybersecurity without directly affecting my main system.
+
+### 2. Network Configuration
+
+I learned how to create a NAT Network in VirtualBox and set the network range to `10.0.0.0/24`.
+
+### 3. Connecting Kali Linux to the Network
+
+I learned how to connect Kali Linux to the VirtualBox network and check its IP address using the `ip a` command.
+
+### 4. Testing Network Connectivity
+
+I learned how to check whether the network is working by using `ping`. I also learned how to test Internet connectivity and DNS resolution using `nslookup`.
+
+### 5. Working With Virtual Machine Storage
+
+I learned how to attach an existing Kali Linux `.vmdk` virtual disk to VirtualBox and use it as the storage for the virtual machine.
+
+### 6. Importance of Snapshots
+
+I learned that taking a snapshot before doing experiments is useful because it gives me a point to return to if something goes wrong.
+
+### 7. Documenting the Work
+
+I learned how to record the setup process with screenshots and organize the work in a GitHub repository using a README file.
+
 ```text
 kali-linux-2025.4-vmware-amd64.vmdk
 
