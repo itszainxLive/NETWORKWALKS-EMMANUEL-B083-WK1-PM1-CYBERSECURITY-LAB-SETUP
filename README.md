@@ -130,6 +130,37 @@ A shared folder was configured to give the Kali VM access to the host machine's 
 ![Shared Folder Settings](screenshots/07-shared-folder.png)
  
 ---
+## Step 8 — Configure Static IP on Kali Linux
+ 
+Kali Linux's network interface was manually configured with a static IP address on the lab subnet, using the **Network Manager GUI (nm-connection-editor)** under IPv4 Settings.
+ 
+| Setting | Value |
+|---|---|
+| IP Address | `10.0.0.2/24` |
+| Gateway | `10.0.0.1` |
+| DNS | `8.8.8.8` |
+| Method | Manual |
+ 
+After saving the configuration, the connection was brought down and back up (or the VM rebooted) using:
+ 
+```bash
+sudo nmcli con down "Wired connection 1"
+sudo nmcli con up "Wired connection 1"
+```
+ 
+Verified with:
+ 
+```bash
+ip a
+```
+ 
+> **Troubleshooting note:** If `eth0` shows no `inet` (IPv4) address after saving the static config, ensure the connection profile is actually active (`nmcli con show`), re-apply it with `nmcli con up`, or reboot the VM. Also confirm the VM's Network Adapter is attached to **NAT Network → NatNetwork** with **Cable Connected** checked.
+ 
+### Screenshot
+ 
+![Kali Static IP Configuration](screenshots/08-kali-static-ip.png)
+ 
+---
 
 # 🔎 Lab Verification
 
