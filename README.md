@@ -183,6 +183,55 @@ ip a
 
 ![Lab Verification 2](screenshots/lab-verification-2.png)
 
+# 🛠️ Problems Encountered & Solutions
+ 
+While configuring this lab, I ran into a real network issue and documented how I solved it, in case others face the same problem.
+ 
+## Problem: Static IP not applying on Kali Linux (Connection activation failed)
+ 
+**Symptom:**
+After manually setting the static IP `10.0.0.2/24` in the Network Manager GUI (IPv4 Settings) and saving it, running `ip a` still showed no IPv4 (`inet`) address on `eth0` — only an IPv6 link-local address was present. The connection also showed no active `DEVICE` in `nmcli con show`.
+ 
+Trying to bring the connection up manually gave this error:
+ 
+```
+$ sudo nmcli con up "Wired connection 1"
+Error: Connection activation failed: IP configuration could not be reserved
+(no available address, timeout, etc.)
+```
+ 
+**Root Cause:**
+This is a known issue on **VirtualBox v7** with **Kali Linux 2026.1 and newer**, caused by IPv4 **Duplicate Address Detection (DAD)** timing out before the static address can be applied.
+ 
+**Solution:**
+The DAD timeout was disabled for the connection, and the connection was reset:
+ 
+```bash
+sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
+sudo nmcli connection down "Wired connection 1"
+sudo nmcli connection up "Wired connection 1"
+```
+ 
+After running these commands, `ip a` confirmed the static IP was applied correctly:
+ 
+```
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> ...
+    inet 10.0.0.2/24 brd 10.0.0.255 scope global noprefixroute eth0
+```
+ 
+**Extra troubleshooting steps (if issue persists):**
+1. Check the NAT Network was created correctly in VirtualBox (`10.0.0.0/24`, enabled).
+2. Confirm the VM's Network Adapter is attached to **NAT Network → NatNetwork**, with **Cable Connected** checked.
+3. Make sure no other VM on the same NAT Network is already using `10.0.0.2`.
+4. Reboot the Kali VM and the host machine if the problem still persists.
+5. If internet connectivity is affected even after a valid IP is assigned, switch the DNS server to the gateway (`10.0.0.1`) instead of `8.8.8.8`.
+### Screenshot
+ 
+![Static IP Fix - Connection Error](screenshots/09-ip-error.png)
+![Static IP Fix - Working](screenshots/10-ip-fixed.png)
+ 
+---
+
 # 💡 What I Learned
 
 While doing this lab, I learned how to set up a basic cybersecurity environment using VirtualBox and Kali Linux.
