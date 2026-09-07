@@ -99,6 +99,38 @@ The VM was configured with 2048 MB RAM and connected to the `NatNetwork`.
 
 ![Kali Linux Virtual Machine](screenshots/05-kali-linux.png)
 
+## Step 6 — Enable Clipboard & Drag/Drop
+ 
+Shared Clipboard and Drag'n'Drop were both enabled in **Bidirectional** mode under **VM Settings → General → Advanced**, allowing seamless copy/paste and file transfer between the host machine and the Kali VM.
+ 
+| Setting | Value |
+|---|---|
+| Shared Clipboard | Bidirectional |
+| Drag'n'Drop | Bidirectional |
+ 
+### Screenshot
+ 
+![Clipboard and Drag Drop Settings](screenshots/06-clipboard-dragdrop.png)
+ 
+---
+## Step 7 — Enable Shared Folder (/downloads)
+ 
+A shared folder was configured to give the Kali VM access to the host machine's **Downloads** folder, enabling easy file transfer of tools, wordlists, and payloads between host and guest.
+ 
+| Setting | Value |
+|---|---|
+| Folder Path | Host `Downloads` folder |
+| Folder Name | `downloads` |
+| Auto-mount | Yes |
+| Make Permanent | Yes |
+| Mount Point (inside Kali) | `/media/sf_downloads` |
+ 
+### Screenshot
+ 
+![Shared Folder Settings](screenshots/07-shared-folder.png)
+ 
+---
+
 # 🔎 Lab Verification
 
 | **✅ Test** | **🧾 Command** | **🎯 Expected Result** |
